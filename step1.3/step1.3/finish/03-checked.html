@@ -2,29 +2,27 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>selector: enabled</title>
+	<title>selector: checked</title>
 	<link href="styles.css" rel="stylesheet">
 <style>
 	/* example 1 */
-	input:enabled
+	input:checked + label { border: 5px solid red; }
 </style>
 </head>
 <body>
 <div class="container">
 	<h1>
-		Selector: enabled {
-			border: 5px solid red;
-		}
+		Selector: checked
 	</h1>
 	<h2>Example 1</h2>
 	<form class="example" action="#">
 		<div>
-			<label for="one">Label 1</label>
-			<input id="one" name="one" type="text">
+			<input id="one" name="one" type="radio" checked>
+			<label for="one">label 1 (checked)</label>
 		</div>
 		<div>
-			<label for="two">Label 2 (disabled)</label>
-			<input id="two" name="two" disabled type="text">
+			<input id="two" name="one" type="radio">
+			<label for="two">label 2</label>
 		</div>
 	</form>
 </div>
