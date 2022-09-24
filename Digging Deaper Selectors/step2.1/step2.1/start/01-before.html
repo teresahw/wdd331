@@ -5,16 +5,64 @@
 	<title>selector: before</title>
 	<link href="styles.css" rel="stylesheet">
 <style>
-	/* example 1 */
 
+	/* BEFORE  */
+
+	/* example 1 */
+	.one::before{
+		content: "I'd like to say 'hello'";
+		color:red;
+	}
 	
 	/* example 2 */
-
+	.two::before{
+		content: url(ximage.png);
+		color: red;
+	}
 	
 	/* example 3 */
-
+	.three::before{
+		content: attr(class);
+		color: red;
+	}
 
 	/* example 4 */
+	.four::before{
+		content: "";
+		display: block;
+		width: 50px;
+		height: 50px;
+		background: red;
+	}
+
+	/* AFTER  */
+
+	/* example 1 */
+	.one::after{
+	content: "Hello again";
+	color:blue;
+	}
+	
+	/* example 2 */
+	.two::after{
+		content: url(ximage.png);
+		color: blue;
+	}
+	
+	/* example 3 */
+	.three::after{
+		content: attr(class);
+		color: blue;
+	}
+
+	/* example 4 */
+	.four::before{
+		content: "";
+		display: block;
+		width: 50px;
+		height: 50px;
+		background: blue;
+	}
 
 </style>
 </head>
