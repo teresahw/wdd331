@@ -53,16 +53,22 @@ button {  width: auto; overflow: visible; }
 
 /* videofitness styles */
 
-/* variables */
+// variables 
 
 $base: #4E4F48;
 $accent:  #C2CF52;
+$basefont: Trebuchet MS, san-serif;
 
-
+%transition {
+  -moz-transition: background-color .3s ease-in;
+  -webkit-transition: background-color .3s ease-in;
+  -o-transition: background-color .3s ease-in;
+  transition: background-color .3s ease-in;
+}
 
 body {
   background-color: $base;
-  font-family: "Trebuchet MS", san-serif;
+  font-family: $basefont;
   font-size: 80%;
 }
 #container {
@@ -81,11 +87,72 @@ header {
   border-bottom: 2px solid $accent;
   position: relative;
   margin-bottom: 25px;
+
+  h1 {
+    text-indent: -9999px;
+    height: 44px;
+  }
+
+  form {
+    float: right;
+    margin-top: 45px;
+  }
+
+  input {
+    position: relative;
+    height: 16px;
+    width: 150px;
+    border: 2px solid $base;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    behavior: url(PIE.htc);
+  }
+
+  input[type="text"] {
+    padding: 5px;
+    background: url(../images/search.png) no-repeat 5px 5px;
+    padding-left: 30px;
+    font: bold italic 1.2em Georgia, "Times New Roman", Times, serif;
+    color: #ddd;
+  }
+  input[type="submit"] {
+    height: 30px;
+    width: 40px;
+    font-weight: bold;
+  }
+  
+  .account {
+    position: absolute;
+    top: 20px;
+    right: 145px;
+  }
+  .account a {
+    display: block;
+    font-size: .9em;
+    color: $base;
+    padding-top: 0px;
+  }
+  .account a:hover { text-decoration: underline; }
+  .account a[href^="cart"] {
+    position: absolute;
+    right: -100px;
+    top: 0;
+    height: 50px;
+    width: 86px;
+    margin-top: 18px;
+  }
+  .account a[href^="cart"] img{
+    margin: -48px 25px 0 0;
+  }
+  p {
+    font-weight: bold;
+    margin-top: 12px;
+    text-align: right;
+  }
 }
-header h1 {
-  text-indent: -9999px;
-  height: 44px;
-}
+
 .branding #logo {
   display: block;
   position: relative;
@@ -95,61 +162,6 @@ header h1 {
   overflow: hidden;
 }
 
-header form {
-  float: right;
-  margin-top: 45px;
-}
-header input {
-  position: relative;
-  height: 16px;
-  width: 150px;
-  border: 2px solid $base;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -o-border-radius: 7px;
-  border-radius: 7px;
-  behavior: url(PIE.htc);
-}
-header input[type="text"] {
-  padding: 5px;
-  background: url(../images/search.png) no-repeat 5px 5px;
-  padding-left: 30px;
-  font: bold italic 1.2em Georgia, "Times New Roman", Times, serif;
-  color: #ddd;
-}
-header input[type="submit"] {
-  height: 30px;
-  width: 40px;
-  font-weight: bold;
-}
-
-header .account {
-  position: absolute;
-  top: 20px;
-  right: 145px;
-}
-header .account a {
-  display: block;
-  font-size: .9em;
-  color: $base;
-  padding-top: 0px;
-}
-header .account a:hover { text-decoration: underline; }
-header .account a[href^="cart"] {
-  position: absolute;
-  right: -100px;
-  top: 0;
-  height: 50px;
-  width: 86px;
-  margin-top: 18px;
-}
-header .account a[href^="cart"] img{
-  margin: -48px 25px 0 0;
-}
-header p {
-  font-weight: bold;
-  margin-top: 12px;
-}
 nav {
   height: 30px;
   margin: 45px 0 0;
@@ -172,10 +184,7 @@ nav ul li a {
   -o-border-radius: 7px;
   border-radius: 7px;
   behavior: url(PIE.htc);
-  -moz-transition: background-color .3s ease-in;
-  -webkit-transition: background-color .3s ease-in;
-  -o-transition: background-color .3s ease-in;
-  transition: background-color .3s ease-in;
+  @extend %transition;
 }
 nav ul li a:hover {
   background-color: $accent;
@@ -187,9 +196,6 @@ nav ul.account {
   border: 1px solid #3FF;
 }
 
-header p {
-  text-align: right;
-}
 #main { hidden: overflow; overflow: auto; }
 #category #main { height: 468px; }
 #feature {  margin-bottom: 20px; float: left; position: relative; }
@@ -208,10 +214,7 @@ header p {
   font-weight: bold;
   padding: 10px;
   color: white;
-  -moz-transition: all .3s ease-in;
-  -webkit-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  @extend %transition;
 }
 .new a:hover span.overlay {
   opacity: 1;
@@ -316,10 +319,7 @@ img { float: left; }
   -o-border-radius: 15px 15px 0 0;
   border-radius: 15px 15px 0 0;
   behavior: url(PIE.htc);
-  -moz-transition: all .3s ease-in;
-  -webkit-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  @extend %transition;
 }
 #player_nav li.detail a { background-position: 0 -43px; }
 #player_nav li.video a { background-position: 0 -129px; }
@@ -447,10 +447,7 @@ p.reviewer { clear: both; font-size: .95em; margin: 15px 4px; }
   color:  $base;
   font-size: 1.3em;
   margin-left: 1em;
-  -moz-transition: all .3s ease-in;
-  -webkit-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  @extend %transition;
 }
 #listing li a:hover {
   -moz-border-radius: 8px;
