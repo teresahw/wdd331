@@ -11,6 +11,12 @@ $mainfont: 'Helvetica', 'Arial', sans-serif;
 $secondaryfont: 'Lora', serif;
 $borderstyle: 1px solid $light;
 
+@mixin fontstyle($size: 25px) {
+  font-family: $secondaryfont;
+  font-size: $size;
+}
+
+//@include fontstyle;
 
 
 // Small page
@@ -33,9 +39,9 @@ h1 {
 nav {
   border-top: $borderstyle;
   border-bottom: $borderstyle;
-  font-family: $secondaryfont;
   text-transform: uppercase;
   ul {
+    font-family: $secondaryfont;
     list-style-type: none;
     text-align: center;
     margin: 0;

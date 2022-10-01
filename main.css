@@ -15,9 +15,9 @@ h1 {
 nav {
   border-top: 1px solid #d0d0d0;
   border-bottom: 1px solid #d0d0d0;
-  font-family: "Lora", serif;
   text-transform: uppercase; }
   nav ul {
+    font-family: "Lora", serif;
     list-style-type: none;
     text-align: center;
     margin: 0;
