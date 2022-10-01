@@ -11,12 +11,10 @@ $mainfont: 'Helvetica', 'Arial', sans-serif;
 $secondaryfont: 'Lora', serif;
 $borderstyle: 1px solid $light;
 
-@mixin fontstyle($size: 25px) {
-  font-family: $secondaryfont;
+@mixin fontstyle($size: 25px, $secondaryfont: 1px solid $light) {
   font-size: $size;
+  font-family: $secondaryfont;
 }
-
-//@include fontstyle;
 
 
 // Small page
@@ -27,9 +25,8 @@ body {
     font-family: $mainfont;
 }
 h1 {
-  font-family: $secondaryfont;
-  font-size: 65px;
   text-align: center;
+  @include fontstyle(65px);
   a {
     text-decoration: none;
     color: $dark;
@@ -41,12 +38,11 @@ nav {
   border-bottom: $borderstyle;
   text-transform: uppercase;
   ul {
-    font-family: $secondaryfont;
     list-style-type: none;
     text-align: center;
     margin: 0;
     padding: 0;
-    font-size: 18px;
+    @include fontstyle(18px);
   }
 }
 
@@ -71,16 +67,14 @@ li {
   padding-top: 40px;
   padding-bottom: 10px;
   text-transform: uppercase;
-  font-family: $secondaryfont;
-  font-size: 25px;
   padding-right: 10px;
+  @include fontstyle;
 }
 
 h2 a {
-  font-family: $secondaryfont;
   color: $accent1;
   text-decoration: none;
-  font-size: 25px;
+  @include fontstyle;
 }
 
 .post-content {

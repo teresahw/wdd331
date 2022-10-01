@@ -5,9 +5,9 @@ body {
   font-family: "Helvetica", "Arial", sans-serif; }
 
 h1 {
-  font-family: "Lora", serif;
+  text-align: center;
   font-size: 65px;
-  text-align: center; }
+  font-family: 1px solid #d0d0d0; }
   h1 a {
     text-decoration: none;
     color: #000000; }
@@ -17,12 +17,12 @@ nav {
   border-bottom: 1px solid #d0d0d0;
   text-transform: uppercase; }
   nav ul {
-    font-family: "Lora", serif;
     list-style-type: none;
     text-align: center;
     margin: 0;
     padding: 0;
-    font-size: 18px; }
+    font-size: 18px;
+    font-family: 1px solid #d0d0d0; }
 
 li {
   padding: 10px; }
@@ -40,15 +40,15 @@ li {
   padding-top: 40px;
   padding-bottom: 10px;
   text-transform: uppercase;
-  font-family: "Lora", serif;
+  padding-right: 10px;
   font-size: 25px;
-  padding-right: 10px; }
+  font-family: 1px solid #d0d0d0; }
 
 h2 a {
-  font-family: "Lora", serif;
   color: #666666;
   text-decoration: none;
-  font-size: 25px; }
+  font-size: 25px;
+  font-family: 1px solid #d0d0d0; }
 
 .post-content {
   padding-top: 10px;
