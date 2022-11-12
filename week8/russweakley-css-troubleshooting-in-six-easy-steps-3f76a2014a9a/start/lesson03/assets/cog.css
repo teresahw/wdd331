@@ -132,7 +132,8 @@ skiplink
 nav
 ----------------------------------- */
 
-.nav ul
+
+#nav ul
 {
 	float: left;
 	width: 100%;
@@ -143,7 +144,7 @@ nav
 
 .lt-ie8 #nav li { display: inline; }
 
-.nav a
+#nav a
 {
 	float: left;
 	padding: .6em 1.2em;
@@ -154,25 +155,25 @@ nav
 	text-transform: uppercase;
 }
 
-.nav .current a
+#nav .current a
 {
 	color: #000;
 	background-color: #E79538;
 }
 
-.nav a:focus,.nav .current a:focus
+#nav a:focus,.nav .current a:focus
 {
 	color: #fff;
 	background-color: #000;
 }
 
-.nav a:hover
+#nav a:hover
 {
 	color: #000;
 	background-color: #E79538;
 }
 
-.nav a:active,.nav .current a:active
+#nav a:active,#nav .current a:active
 {
 	color: #fff;
 	background-color: #B40000;
