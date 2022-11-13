@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
+body {
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Lora', serif;
+    margin: 5px;
+}
+
+.row-grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: auto;
+    margin-bottom: 50px;
+    border: 2px solid red;
+    align-items: stretch;
+}
+
+.row-grid .card {
+    border: 2px solid black;
+    margin: 5px;
+    height: 200px;
+    border-radius: 2%;
+}
+
+.row-grid .card img {
+    width: 100%;
+    max-height: 140px;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}
+
+
+
+.col-grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 650px;
+    align-items: stretch;
+    margin-top: 50px;
+    border: 2px solid yellow;
+}
+
+.col-grid .card {
+    border: 2px solid black;
+    border-radius: 2%;
+    margin: 5px;
+    padding-bottom: 60px;
+}
+
+
+.col-grid .card img {
+    height: 100%;
+    max-width: 200px;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}
+
